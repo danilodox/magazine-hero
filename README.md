@@ -17,4 +17,8 @@
 - <a href="https://square.github.io/retrofit/">Retrofit 2 - </a> Type-safe HTTP client para Android por Square, Inc.
 - <a href="https://developer.android.com/guide/navigation/navigation-getting-started">Android Jetpack Navigation - </a> Componente de navegação projetado para aplicativos que têm uma atividade principal com vários destinos de fragmento.
 - <a href="https://mockk.io/ANDROID.html">MockK - </a> Library usada para testes. Mocking library para kotlin.
+
+
+
+https://user-images.githubusercontent.com/26839826/133964544-27831534-9962-42c3-bd39-1efcac335351.mp4
  
