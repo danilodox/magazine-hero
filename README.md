@@ -1,8 +1,8 @@
 ### Hi 👋
 # magazine-hero é um app de listagem de revistas da Marvel
 
-# Em resumo, o aplicativo foi feito da seguinte forma: a primeira tela aparece a lista de revistas da marvel, com 12% delas aleatoriamente raras (o calculo foi feito na api).
-#    Em seguida, quando clicado em uma revista, pula para a tela de detalhes da revista, onde poderá comprar a revista. Alêm de ter a opção de ganhar descontos no cupom e também        escolher a quantidade que quer comprar de revistas. Uma vez clicado no botão de comprar, o app volta para a tela de listagem novamente.  
+ Em resumo, o aplicativo foi feito da seguinte forma: a primeira tela aparece a lista de revistas da marvel, com 12% delas aleatoriamente raras (o calculo foi feito na api).
+    Em seguida, quando clicado em uma revista, pula para a tela de detalhes da revista, onde poderá comprar a revista. Alêm de ter a opção de ganhar descontos no cupom e também       escolher a quantidade que quer comprar de revistas. Uma vez clicado no botão de comprar, o app volta para a tela de listagem novamente.  
 
 *Obs: O app roda apartir da api 21.
 
