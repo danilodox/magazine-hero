@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:id="@+id/fragment_comic_detail_parent"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        >
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:toolbarId="@+id/toolbar">
+
+            <ImageView
+                android:id="@+id/comicDetailsPoster"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_500dp"
+                android:scaleType="fitXY"
+                android:background="@color/white"
+                android:fitsSystemWindows="true"
+                app:layout_collapseMode="pin" />
+
+
+            <include
+                android:id="@+id/progress_loading_event"
+                layout="@layout/view_loading"
+                android:visibility="gone"/>
+
+            <include
+                android:id="@+id/error_network_event"
+                layout="@layout/view_error"
+                android:visibility="gone"/>
+
+
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_4dp"
+                app:layout_collapseMode="pin"
+                />
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!--     Nested Scroll View        -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context=".ui.eventDetails.EventDetailsActivity"
+        tools:showIn="@layout/fragment_comic_details">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/comicDetailsTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dimen_12dp"
+                android:fontFamily="serif"
+                android:layout_marginRight="@dimen/dimen_55dp"
+                android:layout_marginLeft="@dimen/dimen_8dp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dimen_24sp"
+
+                />
+
+            <TextView
+                android:id="@+id/comicDetailsDescription"
+                android:textSize="@dimen/dimen_16sp"
+                android:padding="@dimen/dimen_8dp"
+                android:fontFamily="serif"
+                android:lines="3"
+                android:layout_marginLeft="@dimen/dimen_8dp"
+                android:text="MARVEL is as good as DC"
+                android:textColor="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:id="@+id/comicDetailsPrice"
+                android:textSize="@dimen/dimen_16sp"
+                android:padding="@dimen/dimen_8dp"
+                android:fontFamily="serif"
+                android:layout_marginLeft="@dimen/dimen_8dp"
+                android:textColor="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/button_share"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_8dp"
+        app:layout_anchor="@id/app_bar"
+        app:layout_anchorGravity="bottom|end"
+        android:layout_marginEnd="@dimen/dimen_0dp"
+        app:srcCompat="@android:drawable/ic_menu_share" />
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/bottom_sheet_check_in"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/bs_check_in"
+            style="@style/Widget.MaterialComponents.BottomSheet.Modal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:behavior_peekHeight="72dp"
+            app:cardBackgroundColor="#eee"
+            app:cardCornerRadius="18dp"
+            app:cardElevation="12dp"
+            app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+            <include
+                layout="@layout/view_check_in_bottom_sheet"
+                android:layout_width="match_parent"
+                android:layout_height="400dp" />
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
